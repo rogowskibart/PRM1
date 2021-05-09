@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PRM1</string>
+    <string name="search">search</string>
+    <string name="more">more</string>
+    <string name="content_description_search">search</string>
+    <string name="content_description_more">more</string>
+    <string name="fab">Add new expense</string>
+</resources>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    tools:context=".ExpenseEditActivity">
+
+    <TextView
+        android:id="@+id/expenseEditPlaceTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Place"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/expenseEditPlaceEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/expenseEditPlaceTv"
+        tools:text="place"
+        />
+
+    <TextView
+        android:id="@+id/expenseEditAmountTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/expenseEditPlaceEt"
+        />
+
+    <EditText
+        android:id="@+id/expenseEditAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/expenseEditAmountTv"
+        tools:text="amount"
+        />
+
+    <TextView
+        android:id="@+id/expenseEditDateTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/expenseEditAmount"
+        />
+
+    <EditText
+        android:id="@+id/expenseEditDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:cursorVisible="false"
+        tools:text="date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/expenseEditDateTv"
+        />
+
+    <TextView
+        android:id="@+id/expenseEditCategoryTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/expenseEditDate"
+        />
+
+    <EditText
+        android:id="@+id/expenseEditCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/expenseEditCategoryTv"
+        tools:text="category"
+        />
+
+    <Button
+        android:id="@+id/expenseEditSaveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/expenseEditCategory"
+        android:onClick="saveButtonClicked"
+        android:text="save"
+        />
+
+    <Button
+        android:id="@+id/expenseEditCancelButton"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:onClick="cancelButtonClicked"
+        app:layout_constraintStart_toEndOf="@id/expenseEditSaveButton"
+        app:layout_constraintTop_toTopOf="@id/expenseEditSaveButton"
+        android:text="cancel"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
